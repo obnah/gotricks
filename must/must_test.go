@@ -22,7 +22,7 @@ func TestSucceed(t *testing.T) {
 		return -1, fmt.Errorf("%s", "the answer is 42!")
 	}
 
-	if 42 != Succeed(answerIs(42)) {
+	if Succeed(answerIs(42)) != 42 {
 		t.Errorf("test failed")
 	}
 
